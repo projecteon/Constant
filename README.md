@@ -32,9 +32,21 @@ Using constants:
 	public class Product
 	{
 		private Producttype producttype;
+		
+		public Product(string type)
+		{
+			producttype = ProductType.GetOrDefaultFor(type);
+		}	
+	
 		public void Validate()
 		{
 			if(prodtuctype.IsValid)
+			{
+				return true;
+			}
+
+			// Just to illustrate that it can be used as a normal enum as well
+			if(producttype == Producttype.Default)
 			{
 				return true;
 			}
