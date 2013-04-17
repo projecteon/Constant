@@ -17,9 +17,10 @@ Creating constants:
 		public static readonly Producttype Default = new Producttype("default", false);
 		public static readonly Producttype Box = new Producttype("box", true);
 
-		private TestableConstant(string key)
+		private TestableConstant(string key, bool isValid)
 		{
 			this.Add(key, this);
+			IsValid = isValid;
 		}
 
 		public bool ValidType { get; private set; }
