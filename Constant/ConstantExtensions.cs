@@ -5,24 +5,28 @@
 
     internal static class ConstantExtensions
     {
-        private static T DefaultValue<T>() where T : Constant<T>
+        private static T DefaultValue<TKey, T>()
+            where T : Constant<TKey, T>
+            where TKey : IComparable
         {
             var fields = typeof(T).GetFields().ThatAreStatic();
             var defaultField = fields.WithAttributeOfType<DefaultKeyAttribute>().FirstOrDefault();
             if (defaultField == null)
             {
-                return null;
+                throw new ArgumentException("No default value defined for Named Constant type " + typeof(T));
             }
             return (T)defaultField.GetValue(null);
         }
 
-        public static T OrDefault<T>(this T value) where T : Constant<T>
+        public static T OrDefault<TKey, T>(this T value)
+            where T : Constant<TKey, T>
+            where TKey : IComparable
         {
             if (value != null)
             {
                 return value;
             }
-            var defaultValue = DefaultValue<T>();
+            var defaultValue = DefaultValue<TKey, T>();
             if (defaultValue == null)
             {
                 throw new ArgumentException("No default value defined for Named Constant type " + typeof(T));

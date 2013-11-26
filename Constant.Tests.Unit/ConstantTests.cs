@@ -1,7 +1,7 @@
-﻿namespace Constant.Tests.Unit
-{
-    using System.Linq;
+﻿using System.Collections.Generic;
 
+namespace Constant.Tests.Unit
+{
     using Xunit;
 
     public class ConstantTests
@@ -43,10 +43,10 @@
         {
             var constants = TestableConstant.GetAll();
 
-            Assert.Equal(2, constants.Count());
+            Assert.Equal(new List<TestableConstant>{ TestableConstant.Default, TestableConstant.Constant1}, constants);
         }
 
-        private class TestableConstant : Constant<TestableConstant>
+        private class TestableConstant : Constant<string, TestableConstant>
         {
             [DefaultKey]
             public static readonly TestableConstant Default = new TestableConstant("default");

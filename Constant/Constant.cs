@@ -1,23 +1,25 @@
-﻿namespace Constant
+﻿using System;
+
+namespace Constant
 {
     using System.Reflection;
     using System.Collections.Generic;
     using System.Linq;
 
-    public abstract class Constant<T> : IConstant
-        where T : Constant<T>
+    public abstract class Constant<TKey, T> : IKeyedConstant<TKey>
+        where T : Constant<TKey, T> where TKey : IComparable
     {
-        public string Key { get; private set; }
+        public TKey Key { get; private set; }
 
-        private static readonly Dictionary<string, T> Constants = new Dictionary<string, T>();
+        private static readonly Dictionary<TKey, T> Constants = new Dictionary<TKey, T>();
 
-        protected void Add(string key, T item)
+        protected void Add(TKey key, T item)
         {
             Key = key;
-            Constants.Add(key.ToLower(), item);
+            Constants.Add(key, item);
         }
 
-        private bool Equals(Constant<T> other)
+        private bool Equals(Constant<TKey, T> other)
         {
             return string.Equals(Key, other.Key);
         }
@@ -38,13 +40,13 @@
             {
                 return false;
             }
-            
-            return Equals((Constant<T>)obj);
+
+            return Equals((Constant<TKey, T>)obj);
         }
 
         public override int GetHashCode()
         {
-            return (Key != null ? Key.GetHashCode() : 0);
+            return (!Equals(Key, default(TKey)) ? Key.GetHashCode() : 0);
         }
 
         public static IEnumerable<T> GetAll()
@@ -53,19 +55,19 @@
             return Constants.Values.Distinct();
         }
 
-        private static T Get(string key)
+        private static T Get(TKey key)
         {
-            if (key == null)
+            if (Equals(key, default(TKey)))
             {
                 return null;
             }
             
             T t;
-            Constants.TryGetValue(key.ToLower(), out t);
+            Constants.TryGetValue(key, out t);
             return t;
         }
 
-        public static bool operator ==(Constant<T> a, Constant<T> b)
+        public static bool operator ==(Constant<TKey, T> a, Constant<TKey, T> b)
         {
             if (ReferenceEquals(a, b))
             {
@@ -80,18 +82,18 @@
             return a.Equals(b);
         }
 
-        public static bool operator !=(Constant<T> a, Constant<T> b)
+        public static bool operator !=(Constant<TKey, T> a, Constant<TKey, T> b)
         {
             return !(a == b);
         }
 
-        public static T GetOrDefaultFor(string key)
+        public static T GetOrDefaultFor(TKey key)
         {
             var foundEnum = GetFor(key);
-            return foundEnum.OrDefault();
+            return foundEnum.OrDefault<TKey, T>();
         }
 
-        public static T GetFor(string key)
+        public static T GetFor(TKey key)
         {
             EnsureValues();
             return Get(key);

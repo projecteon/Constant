@@ -40,7 +40,7 @@
     <Compile Include="ConstantExtensions.cs" />
     <Compile Include="DefaultKeyAttribute.cs" />
     <Compile Include="FieldInfoExtensions.cs" />
-    <Compile Include="IConstant.cs" />
+    <Compile Include="IKeyedConstant.cs" />
     <Compile Include="MemberInfoExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
