@@ -53,9 +53,8 @@ namespace Constant.Tests.Unit
 
             public static readonly TestableConstant Constant1 = new TestableConstant("constant1");
 
-            private TestableConstant(string key)
+            private TestableConstant(string key): base(key)
             {
-                this.Add(key, this);
             }
         }
     }

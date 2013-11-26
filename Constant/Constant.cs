@@ -13,6 +13,11 @@ namespace Constant
 
         private static readonly Dictionary<TKey, T> Constants = new Dictionary<TKey, T>();
 
+        protected Constant(TKey key)
+        {
+            Add(key, (T)this);
+        }
+
         protected void Add(TKey key, T item)
         {
             Key = key;
