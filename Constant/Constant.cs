@@ -64,7 +64,7 @@ namespace Constant
         {
             if (Equals(key, default(TKey)))
             {
-                return null;
+                throw new ArgumentNullException("Key <null> is not found in Constant for " + typeof(T));
             }
             
             T t;
@@ -94,14 +94,20 @@ namespace Constant
 
         public static T GetOrDefaultFor(TKey key)
         {
-            var foundEnum = GetFor(key);
+            var foundEnum = Get(key);
             return foundEnum.OrDefault<TKey, T>();
         }
 
         public static T GetFor(TKey key)
         {
             EnsureValues();
-            return Get(key);
+            T t = Get(key);
+            if (t == null)
+            {
+                throw new KeyNotFoundException("Key <" + key + "> is not found in Constant for <" + typeof(T) + ">");
+            }
+
+            return t;
         }
 
         private static void EnsureValues()

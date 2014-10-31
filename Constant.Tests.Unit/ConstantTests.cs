@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Constant.Tests.Unit
 {
@@ -31,11 +32,15 @@ namespace Constant.Tests.Unit
         }
 
         [Fact]
-        public void GivenKeyDoesNotExistInConstants_WhenGetForIsCalled_NullIsReturned()
+        public void GivenKeyDoesNotExistInConstants_WhenGetForIsCalled_ExceptionIsThrown()
         {
-            var constant = TestableConstant.GetFor("notExistsingKey");
+            Assert.Throws<KeyNotFoundException>(() => TestableConstant.GetFor("notExistsingKey"));
+        }
 
-            Assert.Equal(null, constant);
+        [Fact]
+        public void GivenKeyIsNull_WhenGetForIsCalled_ExceptionIsThrown()
+        {
+            Assert.Throws<ArgumentNullException>(() => TestableConstant.GetFor(null));
         }
 
         [Fact]
@@ -50,7 +55,6 @@ namespace Constant.Tests.Unit
         {
             [DefaultKey]
             public static readonly TestableConstant Default = new TestableConstant("default");
-
             public static readonly TestableConstant Constant1 = new TestableConstant("constant1");
 
             private TestableConstant(string key): base(key)
