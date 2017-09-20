@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Constant.Tests.Unit
+﻿namespace Constant.Tests.Unit
 {
+    using System;
+    using System.Collections.Generic;
     using Xunit;
 
     public class ConstantTests

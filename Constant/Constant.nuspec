@@ -12,6 +12,6 @@
     <description>$description$</description>
     <releaseNotes>See project url and the changelog for release notes</releaseNotes>
     <copyright>Copyright 2013</copyright>
-    <tags>enum smartenum pcl</tags>
+    <tags>enum smartenum netstandard2.0</tags>
   </metadata>
 </package>

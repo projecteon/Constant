@@ -1,10 +1,9 @@
-﻿using System;
-
-namespace Constant
+﻿namespace Constant
 {
-    using System.Reflection;
+    using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Reflection;
 
     public abstract class Constant<TKey, T> : IKeyedConstant<TKey>
         where T : Constant<TKey, T> where TKey : IComparable
