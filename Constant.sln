@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constant", "Constant\Constant.csproj", "{267C2C4F-030D-4283-AA9C-1B96E00F8BC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constant", "Constant\Constant.csproj", "{267C2C4F-030D-4283-AA9C-1B96E00F8BC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constant.Tests.Unit", "Constant.Tests.Unit\Constant.Tests.Unit.csproj", "{550EA9DC-B83A-470A-AAF1-CE7FCE61752E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constant.Tests.Unit", "Constant.Tests.Unit\Constant.Tests.Unit.csproj", "{550EA9DC-B83A-470A-AAF1-CE7FCE61752E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{21E59702-62C4-494E-81CF-FB9417F71851}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		CodeMaid.config = CodeMaid.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
