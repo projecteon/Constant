@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.0.2</Version>
     <Authors>Aleksander Spro</Authors>
     <Company />
     <Copyright>Copyright ©  2013</Copyright>
@@ -11,7 +10,7 @@
     <PackageProjectUrl>https://github.com/projecteon/Constant</PackageProjectUrl>
     <RepositoryUrl>https://github.com/projecteon/Constant</RepositoryUrl>
     <PackageTags>enum smartenum netstandard2.0</PackageTags>
-    <Version>2.0.1</Version>
+    <Version>2.0.2</Version>
     <AssemblyVersion>2.0.0.2</AssemblyVersion>
     <FileVersion>2.0.0.2</FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
