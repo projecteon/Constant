@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		CodeMaid.config = CodeMaid.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constant.JsonConverter", "Constant.JsonConverter\Constant.JsonConverter.csproj", "{82342D99-387C-48A3-85A9-064BDA99E559}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{550EA9DC-B83A-470A-AAF1-CE7FCE61752E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{550EA9DC-B83A-470A-AAF1-CE7FCE61752E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{550EA9DC-B83A-470A-AAF1-CE7FCE61752E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82342D99-387C-48A3-85A9-064BDA99E559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82342D99-387C-48A3-85A9-064BDA99E559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82342D99-387C-48A3-85A9-064BDA99E559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82342D99-387C-48A3-85A9-064BDA99E559}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
