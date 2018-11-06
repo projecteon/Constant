@@ -56,11 +56,11 @@ Using constants:
 	}
 <!-- {% endexamplecode %} -->
 
-###Motivation
+### Motivation
 The project was created because I found I had needs for this in quite a few projects and got tired of moving the code around. Enums in themselves can end up hiding businesslogic so this is the logical next step. Making it to a NuGet package made using this much easier.
 
-###Installation
+### Installation
 The project can be installed easiliy via NuGet or by downloading and compiling the source yourself.
 
-###License
+### License
 See Lisence.txt
