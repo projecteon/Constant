@@ -3,6 +3,8 @@ Constant
 
 Visit the [Constant website](https://github.com/projecteon/Constant) for more information.
 
+[![Travis CI Build Status](https://travis-ci.org/projecteon/Constant.svg?branch=master)](https://travis-ci.org/projecteon/Constant)
+
 ### What is it?
 Constant enables developers to create [smart enums](http://shashankshetty.wordpress.com/2010/07/18/smart-enums/) in C# and is implemented using .NET portable class libraries.  
 
