@@ -2,11 +2,11 @@ language: csharp
 solution: Constant.sln
 mono: none
 dotnet: 2.2
-dist: trusty
+dist: xenial
+sudo: required
 
 install:
   - dotnet restore ./Constant.sln
-  - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
 script:
   - dotnet build -c Release ./Constant.sln
-  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./Constant.Tests.Unit/bin/Release/Constant.Tests.Unit.dll
+  - dotnet test ./Constant.Tests.Unit/Constant.Tests.Unit.csproj
