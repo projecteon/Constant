@@ -26,9 +26,8 @@ clone_depth: 1
 test_script:
   # restore packages for our unit tests
   - cmd: dotnet restore ./Constant.Tests.Unit/Constant.Tests.Unit.csproj --verbosity m
-  # run the unit tests (requires changing into the test directory)
-  - cmd: cd Constant.Tests.Unit
-  - cmd: dotnet xunit
+  # run the unit tests
+  - cmd: dotnet test ./Constant.Tests.Unit/Constant.Tests.Unit.csproj
 on_finish :
   # any cleanup in here
 deploy: off
