@@ -1,7 +1,7 @@
 language: csharp
 solution: Constant.sln
 mono: none
-dotnet: 2.2.101
+dotnet: 2.2
 dist: trusty
 
 install:
