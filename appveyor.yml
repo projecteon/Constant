@@ -15,7 +15,7 @@ before_build:
   - cmd: dotnet restore ./Constant/Constant.csproj --verbosity m
 build_script:
   # output will be in ./Constant/bin/debug/netcoreapp1.1/publish
-  - cmd: dotnet publish ./Constant/Constant.csproj
+  - cmd: dotnet build -c Release ./Constant/Constant.csproj
 after_build:
   # For once the build has completed
 artifacts:
