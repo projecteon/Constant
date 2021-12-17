@@ -4,6 +4,7 @@ Constant
 Visit the [Constant website](https://github.com/projecteon/Constant) for more information.
 
 [![NuGet Badge](https://buildstats.info/nuget/Constant)](https://www.nuget.org/packages/Constant/)
+[![NuGet Badge](https://buildstats.info/nuget/Constant.JsonConverter)](https://www.nuget.org/packages/Constant.JsonConverter/)
 
 | Windows | Linux |
 | :---             | :---   |
