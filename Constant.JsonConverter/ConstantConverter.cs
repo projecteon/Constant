@@ -6,7 +6,7 @@ namespace Constant.JsonConverter {
     public class ConstantConverter<TKey, T> : JsonConverter
         where T : Constant<TKey, T> where TKey : IComparable {
         public override bool CanConvert(Type objectType) {
-            return objectType.IsGenericType && objectType.GetGenericTypeDefinition() == typeof(Constant<,>);
+            return objectType == typeof(T);
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer) {
