@@ -15,6 +15,9 @@
     <FileVersion>1.0.0.0</FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageReleaseNotes></PackageReleaseNotes>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Constant.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
 
   <ItemGroup>
