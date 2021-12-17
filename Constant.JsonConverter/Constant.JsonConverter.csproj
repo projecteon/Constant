@@ -10,9 +10,9 @@
     <PackageProjectUrl>https://github.com/projecteon/Constant</PackageProjectUrl>
     <RepositoryUrl>https://github.com/projecteon/Constant</RepositoryUrl>
     <PackageTags>enum smartenum netstandard2.0 json converter</PackageTags>
-    <Version>1.0.0</Version>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageReleaseNotes></PackageReleaseNotes>
     <SignAssembly>true</SignAssembly>
