@@ -10,13 +10,13 @@
     <PackageProjectUrl>https://github.com/projecteon/Constant</PackageProjectUrl>
     <RepositoryUrl>https://github.com/projecteon/Constant</RepositoryUrl>
     <PackageTags>enum smartenum netstandard2.0</PackageTags>
-    <Version>2.0.3</Version>
-    <AssemblyVersion>2.0.0.3</AssemblyVersion>
-    <FileVersion>2.0.0.3</FileVersion>
+    <Version>2.0.4</Version>
+    <AssemblyVersion>2.0.0.4</AssemblyVersion>
+    <FileVersion>2.0.0.4</FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageReleaseNotes>Updated to netstandard 2.0</PackageReleaseNotes>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>Constant.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Constant.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
   </PropertyGroup>
 
