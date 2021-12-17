@@ -1,5 +1,4 @@
 namespace Constant {
-
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -54,8 +53,7 @@ namespace Constant {
                 throw new ArgumentNullException("Key <null> is not found in Constant for " + typeof(T));
             }
 
-            T t;
-            Constants.TryGetValue(key, out t);
+            Constants.TryGetValue(key, out var t);
             return t;
         }
 
@@ -82,7 +80,7 @@ namespace Constant {
 
         public static T GetFor(TKey key) {
             EnsureValues();
-            T t = Get(key);
+            var t = Get(key);
             if (t == null) {
                 throw new KeyNotFoundException("Key <" + key + "> is not found in Constant for <" + typeof(T) + ">");
             }

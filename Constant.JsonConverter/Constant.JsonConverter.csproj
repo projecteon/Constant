@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Aleksander Spro</Authors>
+    <Company />
+    <Copyright>Copyright ©  2013</Copyright>
+    <PackageLicenseUrl>https://github.com/projecteon/Constant/blob/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/projecteon/Constant</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/projecteon/Constant</RepositoryUrl>
+    <PackageTags>enum smartenum netstandard2.0 json converter</PackageTags>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageReleaseNotes></PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Constant\Constant.csproj" />
+  </ItemGroup>
+
+</Project>

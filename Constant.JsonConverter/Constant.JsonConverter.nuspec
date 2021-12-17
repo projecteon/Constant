@@ -10,8 +10,8 @@
     <projectUrl>https://github.com/projecteon/Constant</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>See project url and the changelog for release notes</releaseNotes>
-    <copyright>Copyright 2013</copyright>
-    <tags>enum smartenum netstandard2.0 constant</tags>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>enum smartenum netstandard2.0 constant json converter</tags>
   </metadata>
 </package>
